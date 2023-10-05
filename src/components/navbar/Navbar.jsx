@@ -61,7 +61,7 @@ const Navbar = () => {
           Contact
         </motion.a>
       </div>
-      <a href="/dist/Ankitgiri_resume.pdf" target="_blank" className={styles.button}>
+      <a href="/Ankitgiri_resume.pdf" target="_blank" className={styles.button}>
   <button>Resume</button>
 </a>
 
