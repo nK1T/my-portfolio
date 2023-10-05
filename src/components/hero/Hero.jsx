@@ -64,8 +64,9 @@ function Hero() {
             ease: "easeInOut",
             delay: 1.65,
           }}
-        >
+        ><a href="/#work">
           <button>Click here for more</button>
+        </a>
         </motion.div>
       </div>
   );
