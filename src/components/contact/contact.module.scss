@@ -1,0 +1,69 @@
+@import '../../styles/globals';
+
+.contact {
+    max-width: 700px;
+    margin: 15rem auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .contacttitle {
+        color: $purple;
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    .contactsubtitle {
+        font-size: clamp(40px, 8vw, 60px);
+        color: $purple;
+    }
+
+    .contacttext {
+        color: $ltext;
+        font-size: 18px;
+        letter-spacing: 0.07rem;
+        line-height: 1.6rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .contactcta {
+        margin-top: 1rem;
+        .btn {
+            padding: 1rem 2rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .contact {
+            margin: 10rem auto; /* Adjusted margin for medium-sized screens */
+        }
+
+        .contactsubtitle {
+            font-size: clamp(30px, 6vw, 50px); /* Adjusted font size for medium-sized screens */
+        }
+
+        .contacttext {
+            font-size: 16px; /* Adjusted font size for medium-sized screens */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+      .contact{
+          margin: 15rem 3rem; /* Adjusted margin for smaller screens */
+        }
+
+        .contactsubtitle {
+            font-size: clamp(34px, 5vw, 40px); /* Adjusted font size for smaller screens */
+        }
+
+        .contacttext {
+            line-height: 1.7;
+            color: $stext;
+            font-size: 20px; /* Adjusted font size for smaller screens */
+            font-weight: 200;
+        }
+    }
+}

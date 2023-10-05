@@ -1,0 +1,42 @@
+@import '../../styles/globals';
+
+.email {
+    position: fixed;
+    bottom: 0;
+    right: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    &link {
+      writing-mode: vertical-rl;
+      text-decoration: none;
+      color: $ltext;
+      font-size: 15px;
+      letter-spacing: 0.1rem;
+      margin-bottom: 20px;
+      outline: 2px dashed transparent;
+      padding: 10px;
+      transition: .3s ease-in-out;
+      &:hover {
+        color: $purple;
+      }
+      &:focus {
+        outline-color: $purple;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 2px;
+      height: 90px;
+      margin: 0px auto;
+      background-color: $ltext;
+    }
+    @media screen and (max-width: 1080px) {
+      right: 2rem;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,55 @@
+@import "../../styles/globals";
+
+.socialicons {
+    position: fixed;
+    bottom: 0;
+    left: 4rem;
+    &list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      &item {
+        font-size: 22px;
+        transition: 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &link {
+          padding: 10px;
+          color: $ltext;
+          transition: 0.3s ease-in-out;
+          outline: 2px dashed transparent;
+          &:hover {
+            color: $purple;
+          }
+          &:focus {
+            outline-color: $ltext;
+            transform: translateY(-4px);
+            color: $lpurple;
+          }
+        }
+        &:hover {
+          transform: translateY(-4px);
+        }
+        &:last-child {
+          margin-bottom: 2rem;
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 90px;
+        margin: 0px auto;
+        background-color: $ltext;
+      }
+    }
+    @media screen and (max-width: 1080px) {
+      left: 2rem;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  

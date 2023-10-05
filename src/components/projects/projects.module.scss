@@ -1,0 +1,315 @@
+@import "../../styles/globals";
+.projects {
+  margin: 240px;
+  .title {
+    color: $purple;
+    position: relative;
+    h2 {
+      margin-bottom: 2rem;
+      font-size: 32px;
+      font-weight: 700;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 20px;
+        width: 510px;
+        height: 2px;
+        margin-left: 530px;
+        background-color: $purple;
+      }
+    }
+  }
+  &container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    .project {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      &image {
+        &container {
+          position: relative;
+          width: 600px;
+          height: 300px;
+        }
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &:hover {
+          .projectimageoverlay {
+            background-color: #00000000;
+          }
+          img {
+            filter: none;
+          }
+        }
+        &overlay {
+          transition: 0.3s ease-in-out;
+          z-index: 1;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #9d00ff4d;
+        }
+        img {
+          z-index: 0;
+          filter: grayscale(100%);
+          transition: 0.3s ease-in-out;
+        }
+      }
+      &info {
+        z-index: 5;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5rem;
+        &overline {
+          color: $purple;
+        }
+        &title {
+          width: max-content;
+          color: $text;
+          font-size: 18px;
+          cursor: pointer;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            color: $purple;
+          }
+        }
+        &description {
+          background-color: $lbg;
+          border-radius: 0.2rem;
+          p {
+            color: $text;
+            padding: 2rem;
+            text-align: end;
+          }
+        }
+        &techlist {
+          display: flex;
+          list-style-type: none;
+          gap: 1rem;
+          flex-wrap: wrap;
+          &item {
+            color: $text;
+          }
+        }
+        &links {
+          font-size: 22px;
+          list-style-type: none;
+          display: flex;
+          gap: 1rem;
+          &item {
+            transition: 0.3s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &link {
+              padding: 10px;
+              color: $ltext;
+              transition: 0.3s ease-in-out;
+              outline: 2px dashed transparent;
+              &:hover {
+                color: $purple;
+              }
+              &:focus {
+                outline-color: $purple;
+                transform: translateY(-4px);
+                color: $purple;
+              }
+            }
+          }
+        }
+      }
+      &:nth-of-type(even) {
+        justify-content: flex-start;
+        .projectimage {
+          right: 0;
+          left: initial;
+        }
+        .projectinfo {
+          align-items: flex-start;
+          &description {
+            p {
+              text-align: start;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    .projectinfo {
+      &title {
+        font-size: 30px;
+      }
+      &description {
+        font-weight: 100;
+      }
+    }
+    .title {
+      font-size: 140px;
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        &::after {
+          display: none;
+        }
+      }
+    }
+    &container {
+      align-items: center;
+      .project {
+        justify-content: flex-start;
+        .projectinfo {
+          width: 600px;
+          height: 300px;
+          background-color: rgba(31, 10, 44, 0.592);
+          align-items: flex-start;
+          padding: 1rem;
+
+          &description {
+            background-color: transparent;
+            p {
+              padding: 0;
+              text-align: start;
+            }
+          }
+        }
+        &:nth-of-type(even) {
+          .projectimage {
+            left: 0;
+            right: initial;
+          }
+        }
+      }
+    }
+  }
+  // @media screen and (max-width: 680px) {
+  //   margin: 5rem 0;
+  //   &container {
+  //     .project {
+  //       &image {
+  //         &container {
+  //           width: 500px;
+  //           height: 300px;
+  //         }
+  //       }
+  //       .projectinfo {
+  //         width: 500px;
+  //         height: 300px;
+  //       }
+  //     }
+  //   }
+  // }
+  @media screen and (max-width: 768px) {
+    .projectinfo {
+      &title {
+        font-size: 30px;
+      }
+      &description {
+        font-weight: 100;
+      }
+    }
+    .projects {
+      &container {
+        display: flex;
+        align-items: center;
+        .project {
+          &image {
+            &container {
+              width: 350px;
+              height: 400px;
+            }
+          }
+        }
+        .project{
+          &info {
+            width: 350px;
+            height: 400px;
+            // title{
+            //   font-size: 1000px;
+            //   h2{
+            //     font-size: 100px;
+            //   }
+            // }
+          }
+        }
+      }
+      .title {
+        font-size: 100px;
+        h2 {
+          text-align: center;
+          font-size: 30px;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    margin: 60px 16px;
+    img {
+      width: 100%; /* Ensure the image takes up 100% of the container width */
+      height: inherit; /* Maintain the image's aspect ratio */
+      display: block; /* Remove extra spacing below the image */
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .projectinfo {
+      &title {
+        font-size: 30px;
+      }
+      &description {
+        font-weight: 100;
+      }
+    }
+    margin: 60px 16px;
+    .title {
+      font-size: 140px;
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        &::after {
+          display: none;
+        }
+      }
+    }
+    img {
+      width: 100%; /* Ensure the image takes up 100% of the container width */
+      height: inherit; /* Maintain the image's aspect ratio */
+      display: block; /* Remove extra spacing below the image */
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .projectinfo {
+      &title {
+        color: $stext;
+        font-size: 30px;
+      }
+      &description {
+        font-size: 16.5px;
+        font-weight: 200;
+      }
+    }
+    margin: 60px 16px;
+    .title {
+      font-size: 140px;
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        &::after {
+          display: none;
+        }
+      }
+    }
+    img {
+      width: 100%; /* Ensure the image takes up 100% of the container width */
+      height: inherit; /* Maintain the image's aspect ratio */
+      display: block; /* Remove extra spacing below the image */
+    }
+  }
+}

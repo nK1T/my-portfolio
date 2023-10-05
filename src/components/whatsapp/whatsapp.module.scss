@@ -1,0 +1,40 @@
+@import '../../styles/globals';
+
+.circle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: 1px solid $purple;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(231, 227, 227, 0.2);
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  z-index: 99999;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  display: none; /* Hidden by default for larger screens */
+
+  .arrowup {
+    line-height: 1;
+    color: $purple;
+  }
+
+  &:hover {
+    background-color: $ltext;
+    color: $purple;
+    box-shadow: 0 0 10px 3px rgba(255, 251, 251, 0.241);
+
+    .arrowup {
+      line-height: 1;
+      color: $purple;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+}

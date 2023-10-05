@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
+// $bg:#222831;
+$bg: #080907;
+$lbg: #0e100e;
+$text: #f7fcfc;
+$stext: #ccd6fc;
+// $ltext:#a8b2d1;
+$ltext: #f6f6f4;
+$purple: #892cdc;
+$lpurple: #bc6ff1;
+$llpurple: #d9acf5;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+}
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+body {
+  // min-width: 100vw;
+  overflow-x: hidden;
+  background-color: $bg;
+}
+a {
+  // color: $text;
+  text-decoration: none;
+}
+// .wrapper{
+//     min-width: 1536px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding-left: 200px;
+//     padding-right: 200px;
+// }
+.container {
+  margin: 20px;
+  padding: 5px 60px;
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: $llpurple;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  // background: $llpurple;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $purple;
+  // border: 3px solid $llpurple;
+  border-radius: 10px;
+}
+button {
+  flex: 2;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 4px;
+  max-width: fit-content;
+  border: 1px solid $purple;
+  background-color: transparent;
+  color: $purple;
+  padding: 10px 15px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: $ltext;
+    color: $purple;
+    box-shadow: 0 0 10px 3px rgba(255, 251, 251, 0.241);
+  }
+}
+@media screen and (max-width: 1536px) {
+  .wrapper {
+    min-width: 1356px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    min-width: 1024px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    min-width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    min-width: 640px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .wrapper {
+    min-width: 475px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrapper {
+    min-width: 350px;
+  }
+}

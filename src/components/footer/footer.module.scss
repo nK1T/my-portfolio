@@ -1,0 +1,26 @@
+@import '../../styles/globals';
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 15px;
+    min-height: 70px;
+    .footerlink {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      color: $purple;
+      outline: 2px dashed transparent;
+      transition: 0.3s ease-in-out;
+      padding: 50px;
+      font-size: 17px;
+      &:focus {
+        outline-color: $purple;
+      }
+      .footerinfo {
+        text-align: center;
+      }
+    }
+}

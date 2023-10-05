@@ -1,0 +1,58 @@
+@import '../../styles/globals';
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.blurnav {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    margin: 0;
+    padding: 35px;
+    top: 0;
+    transition: 0.3s ease-in-out;
+    z-index: 100;
+    // background-color: rgba(10, 25, 47, 0.85);
+    box-shadow: 0 10px 30px -10px $lbg;
+    backdrop-filter: blur(10px);
+}
+.logo{
+    font-size: 30px;
+    display: flex;
+    flex: 1;
+    font-weight: 800;
+    text-align: center;
+}
+.links{
+    flex: 2;
+    margin-left: 70px;
+    display: flex;
+    gap: 50px;
+    a{
+        font-size: 20px;
+        font-weight: 600;
+        color: $ltext;
+        &:hover{
+            color: $purple;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .container{
+        padding: 35px 10px;
+    }
+    .links {
+        display: none;
+    }
+    .logo{
+        // height: inherit;
+        // width: inherit;
+        display: flex;
+        justify-content: start;
+    }
+    .blurnav{
+        padding: 35px 20px;
+    }
+}

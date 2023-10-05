@@ -1,0 +1,408 @@
+@import '../../styles/globals';
+.about {
+    margin:240px;
+    .title {
+      color: $purple;
+      position: relative;
+      h2 {
+        margin-bottom: 2rem;
+        font-size: 32px;
+        font-weight: 700;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 20px;
+          width: 850px;
+          height: 2px;
+          margin-left: 190px;
+          background-color: $purple;
+        }
+      }
+    }
+    &grid {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      gap: 1rem;
+      &info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        &text {
+          color: $text;
+          margin-left: 10%;
+          font-size: 18px;
+          letter-spacing: 0.07rem;
+          line-height: 1.6rem;
+          font-weight: 500;
+        }
+        &list {
+          display: grid;
+          grid-template-columns: 33% 33% 33%;
+          list-style-type: none;
+          margin-left: 5%;
+          padding: 0 3rem;
+          &item {
+            line-height: 1.6rem;
+            font-weight: 500;
+            font-size: 16px;
+            color: $text;
+            position: relative;
+            &::before {
+              content: "▹";
+              position: absolute;
+              left: -20px;
+              top: 6px;
+              color: $purple;
+              line-height: 12px;
+            }
+          }
+        }
+      }
+      &photo {
+        position: relative;
+        width: max-content;
+        height: max-content;
+        &:hover {
+          .overlay {
+            background-color: #00000000;
+          }
+          .overlayborder {
+            top: -.3rem;
+            left: -.3rem;
+          }
+          img {
+            filter: none;
+          }
+        }
+        .overlay {
+          transition: 0.3s ease-in-out;
+          z-index: 1;
+          position: absolute;
+          height: 400px;
+          width: 400px;
+          background-color: #9d00ff4d;
+          border-radius: 0.2rem;
+        }
+        .overlayborder {
+          z-index: -3;
+          height: 410px;
+          width: 410px;
+          position: absolute;
+          border: 2px solid $purple;
+          top: 1rem;
+          left: -1rem;
+          border-radius: 0.2rem;
+          transition: 0.3s ease-in-out;
+        }
+        &container {
+          position: relative;
+          height: 350px;
+          width: 350px;
+          object-fit: cover;
+          img {
+            z-index: 0;
+            filter: grayscale(100%);
+            transition: 0.3s ease-in-out;
+            border-radius: 0.2rem;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1360px) {
+      margin: 100px;
+      .title {
+        h2 {
+          font-size: 30px;
+          &::after {
+            width: 65vw;
+          }
+        }
+      }
+      &grid {
+        display: flex; /* Ensure a flex container for easy alignment */
+        flex-direction: column;
+        align-items: center;
+        &info{
+          margin-top: 20px;
+          &list{
+            &item{
+              font-weight: 100;
+            }
+          }
+          &text{
+            margin: 0;
+          }
+          p{
+            font-weight: 100;
+            font-size: 16px;
+          }
+        }
+        &photo{
+            // overflow: hidden;
+          margin-top: 20px;
+          .overlay {
+            height: 223px;
+            width: 223px;
+          }
+          .overlayborder {
+            z-index: -3;
+            height: 210px;
+            width: 210px;
+            position: absolute;
+            border: 2px solid $purple;
+            top: 1.5rem;
+            left: -0.5rem;
+            border-radius: 0.2rem;
+            transition: 0.3s ease-in-out;
+          }
+          &container {
+            height: 223px;
+            width: 223px;
+          }
+        }
+      }
+      img {
+        width: 100%; /* Ensure the image takes up 100% of the container width */
+        height: auto; /* Maintain the image's aspect ratio */
+        display: block; /* Remove extra spacing below the image */
+    }
+    }
+    @media screen and (max-width: 1080px) {
+      margin: 100px;
+      .title {
+        h2 {
+          font-size: 30px;
+          &::after {
+            width: 65vw;
+          }
+        }
+      }
+      &grid {
+        display: flex; /* Ensure a flex container for easy alignment */
+        flex-direction: column;
+        align-items: center;
+        &info{
+          margin-top: 20px;
+          &list{
+            &item{
+              font-weight: 100;
+            }
+          }
+          &text{
+            margin: 0;
+          }
+          p{
+            font-weight: 100;
+            font-size: 16px;
+          }
+        }
+        &photo{
+            // overflow: hidden;
+          margin-top: 20px;
+          .overlay {
+            height: 223px;
+            width: 223px;
+          }
+          .overlayborder {
+            z-index: -3;
+            height: 210px;
+            width: 210px;
+            position: absolute;
+            border: 2px solid $purple;
+            top: 1.5rem;
+            left: -0.5rem;
+            border-radius: 0.2rem;
+            transition: 0.3s ease-in-out;
+          }
+          &container {
+            height: 223px;
+            width: 223px;
+          }
+        }
+      }
+      img {
+        width: 100%; /* Ensure the image takes up 100% of the container width */
+        height: auto; /* Maintain the image's aspect ratio */
+        display: block; /* Remove extra spacing below the image */
+    }
+    }
+    @media screen and (max-width: 768px) {
+      margin: 50px 20px;
+      .title {
+        h2 {
+          font-size: 30px;
+          &::after {
+            width: 65vw;
+          }
+        }
+      }
+      &grid {
+        display: flex; /* Ensure a flex container for easy alignment */
+        flex-direction: column;
+        align-items: center;
+        &info{
+          margin-top: 20px;
+          &list{
+            &item{
+              font-weight: 100;
+            }
+          }
+          &text{
+            margin: 0;
+          }
+          p{
+            font-weight: 100;
+            font-size: 16px;
+          }
+        }
+        &photo{
+            // overflow: hidden;
+          margin-top: 20px;
+          .overlay {
+            height: 223px;
+            width: 223px;
+          }
+          .overlayborder {
+            z-index: -3;
+            height: 210px;
+            width: 210px;
+            position: absolute;
+            border: 2px solid $purple;
+            top: 1.5rem;
+            left: -0.5rem;
+            border-radius: 0.2rem;
+            transition: 0.3s ease-in-out;
+          }
+          &container {
+            height: 223px;
+            width: 223px;
+          }
+        }
+      }
+      img {
+        width: 100%; /* Ensure the image takes up 100% of the container width */
+        height: auto; /* Maintain the image's aspect ratio */
+        display: block; /* Remove extra spacing below the image */
+    }
+    }
+    @media screen and (max-width: 640px) {
+      margin: 50px 20px;
+      .title {
+        h2 {
+          font-size: 30px;
+          &::after {
+            width: 55vw;
+          }
+        }
+      }
+      &grid {
+        &info{
+          margin-top: 20px;
+          &list{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            &item{
+              font-weight: 100;
+            }
+          }
+          &text{
+            margin: 0;
+          }
+          p{
+            font-weight: 100;
+            font-size: 16px;
+          }
+        }
+        &photo{
+            // overflow: hidden;
+          margin-top: 20px;
+          .overlay {
+            height: 223px;
+            width: 223px;
+          }
+          .overlayborder {
+            z-index: -3;
+            height: 210px;
+            width: 210px;
+            position: absolute;
+            border: 2px solid $purple;
+            top: 1.5rem;
+            left: -0.5rem;
+            border-radius: 0.2rem;
+            transition: 0.3s ease-in-out;
+          }
+          &container {
+            height: 223px;
+            width: 223px;
+          }
+        }
+      }
+      img {
+        width: 100%; /* Ensure the image takes up 100% of the container width */
+        height: auto; /* Maintain the image's aspect ratio */
+        display: block; /* Remove extra spacing below the image */
+    }
+    }
+    @media screen and (max-width: 480px) {
+      margin: 50px 20px;  
+      .title {
+        h2 {
+          font-size: 30px;
+          &::after {
+            width: 45vw;
+          }
+        }
+      }
+      &grid {
+        &info{
+          margin-top: 20px;
+          &list{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            &item{
+              font-weight: 100;
+            }
+          }
+          &text{
+            margin: 0;
+          }
+          p{
+            font-weight: 100;
+            font-size: 16px;
+          }
+        }
+        &photo{
+            // overflow: hidden;
+          margin-top: 20px;
+          .overlay {
+            height: 223px;
+            width: 223px;
+          }
+          .overlayborder {
+            z-index: -3;
+            height: 210px;
+            width: 210px;
+            position: absolute;
+            border: 2px solid $purple;
+            top: 1.5rem;
+            left: -0.5rem;
+            border-radius: 0.2rem;
+            transition: 0.3s ease-in-out;
+          }
+          &container {
+            height: 223px;
+            width: 223px;
+          }
+        }
+      }
+      img {
+        width: 100%; /* Ensure the image takes up 100% of the container width */
+        height: auto; /* Maintain the image's aspect ratio */
+        display: block; /* Remove extra spacing below the image */
+    }
+    }
+  }
+  
