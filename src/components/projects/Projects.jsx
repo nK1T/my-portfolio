@@ -22,6 +22,22 @@ function Projects() {
       },
     },
     {
+      image: "/company_portfolio.png",
+      projectName: "A Company's Website",
+      projectLink: "https://gulmohardigitech15.netlify.app/",
+      projectDescription:
+        "A company's dynamic website, built with React.js to provide an interactive and informative digital experience. This web application features dedicated sections for Contact, About Us, and Testimonials, ensuring a comprehensive showcase.",
+      projectTech: [
+        "React",
+        "CSS",
+        "JavaScript",
+      ],
+      projectExternalLinks: {
+        github: "https://github.com/nK1T/CompanyWebsite",
+        externalLink: "https://gulmohardigitech15.netlify.app/",
+      },
+    },
+    {
       projectName: "CarsHub",
       projectLink: "https://netlify.com",
       image: "/carshub.png",
