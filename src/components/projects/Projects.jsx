@@ -5,78 +5,81 @@ import { motion } from "framer-motion";
 function Projects() {
   const projectsData = [
     {
-      image: "/3d_portfolio.png",
-      projectName: "3D Portfolio",
+      image: "/talentfinercom.png",
+      projectName: "Talentfiner.com",
       projectLink: "https://your3dportfolio.netlify.app/",
       projectDescription:
-        "Innovatively conceived and designed a 3D static portfolio website with ReactJS, featuring bespoke components to highlight unique aspects. Seamlessly incorporated 3D objects using libraries like three.js and styled components, enhancing the website's visual appeal and interactive elements.",
+        "EdTech platform allowing users to explore, view, and purchase courses, providing a seamless and intuitive experience for educational content discovery and enrollment. Integrated secure payment processing with Razorpay, ensuring efficient and safe transactions for users purchasing courses",
       projectTech: [
         "React",
-        "CSS",
-        "JavaScript",
-        "three.js",
+        "SCSS",
+        "PHP",
+        "MySQL",
       ],
       projectExternalLinks: {
         github: "https://github.com/nK1T/3D-Portfolio-Website",
-        externalLink: "https://your3dportfolio.netlify.app/",
+        externalLink: "https://talentfiner.com/",
       },
     },
     {
-      image: "/company_portfolio.png",
-      projectName: "A Company's Website",
+      image: "/talentfinerin.png",
+      projectName: "HRIS",
       projectLink: "https://gulmohardigitech15.netlify.app/",
       projectDescription:
-        "A company's dynamic website, built with React.js to provide an interactive and informative digital experience. This web application features dedicated sections for Contact, About Us, and Testimonials, ensuring a comprehensive showcase.",
+        "An authentication-based HRIS (Human Resource Information System) for comprehensive employee management, including employee details, leave requests, payroll processing, and attendance tracking.",
       projectTech: [
         "React",
-        "CSS",
-        "JavaScript",
+        "SCSS",
+        "PHP",
+        "MySQL",
       ],
       projectExternalLinks: {
         github: "https://github.com/nK1T/CompanyWebsite",
-        externalLink: "https://gulmohardigitech15.netlify.app/",
+        externalLink: "https://talentfiner.in/login",
       },
     },
     {
-      projectName: "CarsHub",
+      projectName: "Honeytradi",
       projectLink: "https://netlify.com",
-      image: "/carshub.png",
+      image: "/honeytradi.png",
       projectDescription:
-        "Crafted a dynamic car hub website using Next.js, TypeScript, and Tailwind CSS, ensuring a modern and responsive design Integrated libraries like Headlessui to enhance user interface components and interactions.",
+        "A, real-time crypto trading signals platform to assist users in optimizing their trading strategies through automated buy signals and market insights. Executed automated status updates for signals based on real-time market conditions , ensuring users receive timely, accurate trading advice to enhance decision-making.",
       projectTech: [
-        "Next.js",
-        "Typescript",
-        "Tailwind CSS",
-        "Headless UI",
-        "RapidAPI",
+        "React",
+        "SCSS",
+        "NodeJS",
+        "MongoDB",
+        "ExpressJS",
       ],
       projectExternalLinks: {
         github: "https://github.com/nK1T/CarsHub",
-        externalLink: "https://carshub-nk1t.vercel.app/",
+        externalLink: "https://honeytradi.com/",
       },
     },
     {
-      image: "/myntra_clone.png",
-      projectName: "Myntra Clone",
+      image: "/giigbit.png",
+      projectName: "Giigbit",
       projectLink: "https://netlify.com",
       projectDescription:
-      "Developed a Myntra clone using a tech stack featuring HTML, CSS, and JavaScript, with a focus on delivering a seamless e-commerce experience.",
+      "A comprehensive job portal serving both job seekers and recruiters, enabling users to efficiently find the ideal job or candidate. Implemented features to provide a seamless, personalized job exploration experience, including advanced search filters, job recommendations, and candidate matching capabilities.",
       projectTech: [
-        "HTML",
-        "CSS",
-        "JavaScript",
+        "React",
+        "SCSS",
+        "NodeJS",
+        "MongoDB",
+        "ExpressJS",
       ],
       projectExternalLinks: {
         github: "https://github.com/nK1T/Myntra-Clone",
-        externalLink: "https://myntrakaclone.netlify.app/",
+        externalLink: "https://giigbit.com/",
       },
     },
     {
-      image: "/getdoc.png",
-      projectName: "Medical Website",
+      image: "/metemint.png",
+      projectName: "Metemint",
       projectLink: "https://getdoc.netlify.app/",
       projectDescription:
-        "Crafted a responsive and visually appealing medical website using HTML, CSS, and JavaScript. This comprehensive site includes dedicated sections such as About Us, Contact, and Testimonials, providing a user-friendly platform for information, engagement, and client feedback in the healthcare domain.",
+        "Metemint is the official portfolio website for the Metemint Coin, detailing its origin, vision, and journey in the blockchain ecosystem. Discover the story behind its creation, key milestones, use cases, and future roadmap. Metemint serves as a hub for enthusiasts and investors, showcasing the coin's mission to revolutionize digital transactions with transparency and innovation.",
       projectTech: [
         "HTML",
         "CSS",
@@ -84,7 +87,7 @@ function Projects() {
       ],
       projectExternalLinks: {
         github: "https://github.com/nK1T/Medical-Website",
-        externalLink: "https://getdoc.netlify.app/",
+        externalLink: "https://metemint.io/",
       },
     },
   ];
@@ -150,7 +153,7 @@ function Projects() {
                     ))}
                   </ul>
                   <ul className={styles.projectinfolinks}>
-                    <li className={styles.projectinfolinksitem}>
+                    {/* <li className={styles.projectinfolinksitem}>
                       <a
                         target="_blank"
                         href={projectExternalLinks.github}
@@ -158,7 +161,7 @@ function Projects() {
                       >
                         <FiGithub />
                       </a>
-                    </li>
+                    </li> */}
                     <li className={styles.projectinfolinksitem}>
                       <a
                         target="_blank"

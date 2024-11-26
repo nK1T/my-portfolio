@@ -34,10 +34,10 @@ function About() {
         </div>
         <div className={styles.aboutgridinfo}>
           <p className={styles.aboutgridinfotext}>
-            Hello! My name is Ankit, and I recently completed my Bachelor of Technology (B.Tech) degree in Computer Science and Engineering (CSE) from IIMT College of Engineering. Now, I am eager to apply my skills and learn from experienced professionals.
+          Hello, my name is Ankit, and I hold a Bachelor of Technology (B.Tech) degree in Computer Science and Engineering from IIMT College of Engineering. With over a year of experience as a Full Stack Developer, I have honed my skills in designing, developing, and delivering high-quality web applications.
           </p>
           <p className={styles.aboutgridinfotext}>
-          Fast-forward to today, I am passionate about entering the field of web development, where I aspire to specialize in designing and developing high-quality solutions. My goal is to contribute to projects that not only meet but exceed the expectations of clients, providing them with delightful digital experiences.
+          I am deeply passionate about web development and thrive on creating innovative, user-centric solutions that exceed client expectations. My objective is to contribute to impactful projects by leveraging my expertise to craft seamless and engaging digital experiences.
           </p>
           <p className={styles.aboutgridinfotext}>
             Here are a few technologies I’ve been working with recently:
@@ -49,9 +49,12 @@ function About() {
             <li className={styles.aboutgridinfolistitem}>Express.js</li>
             <li className={styles.aboutgridinfolistitem}>JavaScript</li>
             <li className={styles.aboutgridinfolistitem}>TypeScript</li>
+            <li className={styles.aboutgridinfolistitem}>Pyhton</li>
+            <li className={styles.aboutgridinfolistitem}>PHP</li>
             <li className={styles.aboutgridinfolistitem}>CSS</li>
             <li className={styles.aboutgridinfolistitem}>SASS/SCSS</li>
             <li className={styles.aboutgridinfolistitem}>MongoDB</li>
+            <li className={styles.aboutgridinfolistitem}>MySQL</li>
           </ul>
         </div>
       </div>
